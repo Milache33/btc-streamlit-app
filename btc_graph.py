@@ -40,6 +40,9 @@ def plot_candlestick(df, title):
     )])
     fig.update_layout(title=title, xaxis_title="Temps", yaxis_title="Prix (USD)")
     return fig
+# Afficher les données dans Streamlit pour vérifier
+st.write("Données récupérées :", df)
 
 # Afficher le graphique
 st.plotly_chart(plot_candlestick(df, f"BTC/USD ({timeframe})"))
+"Ajout de l'affichage des données pour debug"
