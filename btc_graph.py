@@ -22,7 +22,6 @@ df["close"] = df["close"].astype(float)
 
 
 
-
 return df
 
 # Interface Streamlit
