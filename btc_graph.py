@@ -14,11 +14,11 @@ st.write("Données brutes reçues :", data)
 df = pd.DataFrame(data, columns=[
         "timestamp", "open", "high", "low", "close", "volume", "-", "-", "-", "-", "-", "-"
     ])
-    df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
-    df["open"] = df["open"].astype(float)
-    df["high"] = df["high"].astype(float)
-    df["low"] = df["low"].astype(float)
-    df["close"] = df["close"].astype(float)
+df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
+df["open"] = df["open"].astype(float)
+df["high"] = df["high"].astype(float)
+df["low"] = df["low"].astype(float)
+df["close"] = df["close"].astype(float)
 
     return df
 
