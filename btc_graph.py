@@ -11,7 +11,7 @@ def get_candlestick_data(interval):
     data = response.json()
 st.write("Données brutes reçues :", data)
     # Transformer les données en DataFrame
-    df = pd.DataFrame(data, columns=[
+df = pd.DataFrame(data, columns=[
         "timestamp", "open", "high", "low", "close", "volume", "-", "-", "-", "-", "-", "-"
     ])
     df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
