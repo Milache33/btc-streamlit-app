@@ -9,7 +9,7 @@ def get_candlestick_data(interval):
     url = f"https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval={interval}&limit={limits[interval]}"
     response = requests.get(url)
     data = response.json()
-
+st.write("Données brutes reçues :", data)
     # Transformer les données en DataFrame
     df = pd.DataFrame(data, columns=[
         "timestamp", "open", "high", "low", "close", "volume", "-", "-", "-", "-", "-", "-"
